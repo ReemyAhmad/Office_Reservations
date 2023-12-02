@@ -14,6 +14,10 @@ class AdminModel {
         $this->db->where('password',$password);
         return $this->db->getOne('admin');
     }
+    public function getAdminByEmail($email){
+        $this->db->where('email',$email);
+        return $this->db->getOne('admin');
+    }
     public function getAdmins(){
         return $this->db->get('admin');
     }
